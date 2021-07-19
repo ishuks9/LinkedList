@@ -1,3 +1,4 @@
+package com.bridgelabz.linkedlist;
 
 public class LinkedList<T> {
 	Node<T> root;
@@ -15,12 +16,37 @@ public class LinkedList<T> {
 		if (this.isEmpty()) {
 			root = node;
 			end = node;
+	
 			
 		} else {
 			end.next = node;
 			end = end.next;
 		}
 		size++;
+	}
+	
+	public T get(int index){
+		Node<T> tempCurrent=new Node(null);
+		if(index>=0 && index<this.size()){
+			tempCurrent=root;
+			for(int i=0;i<index;i++){
+				tempCurrent=tempCurrent.next;
+			}
+		}else{
+			System.out.println("Invalid index");
+		}
+		
+		return tempCurrent.data;
+	}
+	
+	public int size() {
+		Node temp = root;
+		int size = 0;
+		while (temp != null) {
+			temp = temp.next;
+			size++;
+		}
+		return size;
 	}
 	
 	public boolean isEmpty(){
