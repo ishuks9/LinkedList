@@ -1,6 +1,6 @@
 public class Main {
 
-	public static void main(String[] args) {
+  public static void main(String[] args) {
 		 LinkedList List = new LinkedList();
 
 		    //Add four elements in the list.
