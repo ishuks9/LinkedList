@@ -1,3 +1,4 @@
+
 public class LinkedList<T> {
 	Node<T> root;
 	Node<T> end;
