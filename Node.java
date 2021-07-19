@@ -1,6 +1,6 @@
 public class Node<T> {
   
-	T data;
+        T data;
 	Node next;
 
 	public Node(T data) {
