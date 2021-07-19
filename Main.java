@@ -8,6 +8,8 @@ public class Main {
 		    List.push(30);
 		    List.push(70);
                     List.get(2);
+                    List.pop();
+
 		    List.printList();
 
 
