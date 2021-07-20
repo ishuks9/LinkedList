@@ -101,6 +101,18 @@ public class LinkedList<T> {
 	    }
 	}
 	
+	public boolean search(T item){
+		Node temp=root;
+		boolean isPresent=false;
+		while(temp!=null){
+			if(temp.data.equals(item)){
+				isPresent=true;
+			}
+			temp=temp.next;
+		}
+		return isPresent;	
+	}
+	
 	public boolean isEmpty(){
 		if(root==null){
 			return true;
