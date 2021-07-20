@@ -85,6 +85,22 @@ public class LinkedList<T> {
 		return size;
 	}
 	
+	public void popLast() {
+	    if(this.root != null) {
+	      if(this.root.next == null) {
+	        this.root = null;
+	      } else {
+	        Node<T> temp = new Node(null);
+	        temp = this.root;
+	        while(temp.next.next != null)
+	          temp = temp.next;
+	        Node lastNode = temp.next;
+	        temp.next = null; 
+	        lastNode = null;
+	      }
+	    }
+	}
+	
 	public boolean isEmpty(){
 		if(root==null){
 			return true;
