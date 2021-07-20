@@ -8,7 +8,7 @@ public class Main {
 		    List.push(30);
 		    List.push(70);
                     List.printList();
-                    List.popLast();
+                    List.search(30);
 
 		    List.printList();
 
