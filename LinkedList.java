@@ -126,5 +126,27 @@ public class LinkedList<T> {
 			System.out.println(temp.data);
 			temp=temp.next;
 		}
-   }
-}
+    }
+	
+	public void pop_all(int key) {
+		Node<T> nodeToDelete = new Node(nodeToDelete);
+
+		while (root != null && root.data == key) {
+			nodeToDelete = root;
+			root = root.next;
+			nodeToDelete = null;
+		}
+
+		Node temp = root;
+		if (temp != null) {
+			while (temp.next != null) {
+				if (temp.next.data == key) {
+					nodeToDelete = temp.next;
+					temp.next = temp.next.next;
+					nodeToDelete = null;
+				} else {
+					temp = temp.next;
+				}
+			
+			}
+	}
